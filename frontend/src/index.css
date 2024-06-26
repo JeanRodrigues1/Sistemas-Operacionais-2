@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color:  #FFF2D7;
+}
+
+
+.topbar {
+  width: 100%; /* Make it span the full width */
+  height: 4rem; /* Adjust height as needed */
+  background-color: #B0EBB4; /* Background color of the top bar */ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem; /* Padding to the left and right */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative
+}
+
+
+input {
+  background-color: transparent;
+  border: 1px solid #bdb9b8;
+  border-radius: 10px; 
+  padding: 0.5rem; 
+  height: 2rem;
+}
+
+
+input:focus {
+  border-color: #8b8b8b; 
+  outline: none; 
+}
+
+textarea{
+  background-color: transparent;
+  border: 1px solid #bdb9b8;
+  border-radius: 10px;  
+  padding: 0.5rem;
+
+}
+
+textarea:focus {
+  border-color: #8b8b8b; /* Borda cinza forte */
+  outline: none; /* Remove a borda de foco padrão do navegador */
+}
+
+@layer components{
+
+  .btnReserva{
+    @apply rounded-lg bg-violet-500 py-4 px-20 font-sans text-xs font-bold uppercase 
+    shadow-md transition-all hover:shadow-lg hover:shadow-gray-500 
+    focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none 
+    disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none
+  }
+
+}
